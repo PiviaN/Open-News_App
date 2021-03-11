@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import './Menu.css'
 
@@ -8,9 +9,15 @@ const Menu = props => {
             <h1>Welcome to the Open News!</h1>
             <nav>
                 <ul className="menu">
-                    <li><a href="/news" className="first">News</a></li>
-                    <li><a href="/create" className="second">Create</a></li>
-                    <li><a href="/about" className="third">About</a></li>
+                    <li>
+                        <Link to="/news" className="first">News</Link>
+                    </li>
+                    <li>
+                        <Link to="/create" className="second">Create</Link>
+                    </li>
+                    <li>
+                        <Link to="/about" className="third">About</Link>
+                    </li>
                 </ul>
             </nav>
         </header>

@@ -1,17 +1,18 @@
 import React from 'react'
-import { HashRouter } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import './App.css'
 
-import Routes from './Routes'
 import Content from './containers/Content'
+import Menu from './templates/Menu'
+import Footer from './templates/Footer'
+import NewsCrud from './containers/NewsCrud'
 
 export default props =>
-
   <div className="App">
-    <HashRouter>
-      <Routes />
+    <Router>
+      <Menu />
       <Content />
-    </HashRouter>
+      <Footer />
+    </Router>
   </div>
-

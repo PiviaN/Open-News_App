@@ -4,6 +4,7 @@ import axios from 'axios'
 import './NewsCrud.css'
 
 import News from '../components/News'
+import Create from '../components/Create'
 
 const baseUrl = 'https://localhost:3001/news'
 
@@ -119,6 +120,9 @@ class NewsCrud extends Component {
                 <News>
                     {this.renderCard()}
                 </News>
+                <Create>
+                    {this.renderForm()}
+                </Create>
             </div>
         )
     }

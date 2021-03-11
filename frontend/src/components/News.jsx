@@ -1,10 +1,11 @@
 import React from 'react'
 
+import NewsCrud from '../containers/NewsCrud'
+
 const News = props => {
     return (
-        <div>
-            {/* {props.children}        */}
-            Component News
+        <div className="news">
+            {props.children}
         </div>
     )
 }

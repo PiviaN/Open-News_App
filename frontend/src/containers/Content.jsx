@@ -1,17 +1,27 @@
 import React, { Component } from 'react'
-import Footer from '../templates/Footer'
+import { Switch, Route } from 'react-router-dom'
 
-import Menu from '../templates/Menu'
+import News from '../components/News'
+import Create from '../components/Create'
+import About from '../components/About'
 import NewsCrud from './NewsCrud'
 
 class Content extends Component {
     render() {
         return (
-            <React.Fragment>
-                <Menu />
-                {/* <NewsCrud /> */}
-                <Footer />
-            </React.Fragment>
+            <main className="Content">
+                <Switch>
+                    <Route path="/news">
+                        <News />
+                    </Route>
+                    <Route path="/create">
+                        <Create />
+                    </Route>
+                    <Route path="/about">
+                        <NewsCrud />
+                    </Route>
+                </Switch>
+            </main>
         )
     }
 }
