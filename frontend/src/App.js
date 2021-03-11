@@ -6,7 +6,6 @@ import './App.css'
 import Content from './containers/Content'
 import Menu from './templates/Menu'
 import Footer from './templates/Footer'
-import NewsCrud from './containers/NewsCrud'
 
 export default props =>
   <div className="App">

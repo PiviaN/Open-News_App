@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import News from '../components/News'
-import Create from '../components/Create'
+import NewsData from './NewsData'
+import CreateData from './CreateData'
 import About from '../components/About'
-import NewsCrud from './NewsCrud'
+
 
 class Content extends Component {
     render() {
@@ -12,13 +12,13 @@ class Content extends Component {
             <main className="Content">
                 <Switch>
                     <Route path="/news">
-                        <News />
+                        <NewsData />
                     </Route>
                     <Route path="/create">
-                        <Create />
+                        <CreateData />
                     </Route>
                     <Route path="/about">
-                        <NewsCrud />
+                        <About />
                     </Route>
                 </Switch>
             </main>

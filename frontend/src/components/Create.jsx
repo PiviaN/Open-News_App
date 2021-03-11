@@ -2,7 +2,7 @@ import React from 'react'
 
 const Create = props => {
     return (
-        <div>
+        <div className="create">
             {props.children}
         </div>
     )
