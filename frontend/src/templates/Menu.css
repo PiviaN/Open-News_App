@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    font-family: 'Shippori Mincho B1', serif;
+}
+
+.menu {
+    top: 100px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 120px;
+    margin: auto;
+    position: absolute;
+    background-color: red;
+}
+
+.menu li {
+    float: left;
+    width: calc(100% / 3);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-size: 40px;
+}
+
+a.first {
+    background-color: royalblue;
+}
+
+a.first:hover, a.first:focus, a.first:active {
+    background-color: #a21add;
+}
+
+a.second {
+    background-color: #2E8B57;
+}
+
+a.second:hover, a.second:focus, a.second:active {
+    background-color:#778899;
+}
+
+a.third {
+    background-color: #B22222;
+}
+
+a.third:hover, a.third:focus, a.third:active {
+    background-color: gold;
+}
+
+a.first:hover, a.first:focus, a.first:active,
+a.second:hover, a.second:focus, a.second:active,
+a.third:hover, a.third:focus, a.third:active {
+    transition: 0.8s;
+}
+
+

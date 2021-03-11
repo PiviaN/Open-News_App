@@ -1,0 +1,15 @@
+{
+    "news": [{
+        "id": 1,
+        "subject": "News",
+        "title": "A man is found stuck in the bathroom",
+        "description": "Johnattan Carter, 26, Ohio, was found stuck in his own bathroom for three days. When asked to him why, he told us: 'I forgot the towel'",
+        "author": "Tom Louise"
+    }, {
+        "id": 2,
+        "subject": "YouTube",
+        "title": "MrBeast has been trolled by a YouTuber",
+        "description": "Check the link for the full video: www.youtube.com/hd3523zds",
+        "author": "John Lavinski"
+    }]
+}
