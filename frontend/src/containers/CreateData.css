@@ -1,3 +1,73 @@
 .form {
-    margin-top: 300px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  display: block;
+  width: 420px;
+}
+
+.label {
+  font-family: 'Shippori Mincho', serif;
+}
+
+.file-input {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.short-input, .description-input {
+  font-family: 'Playfair Display', serif;
+  width: 410px;
+  display: block;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.short-input {
+  width: 410px;
+  padding: 8px;
+  height: 28px;
+  font-size: 16px;
+}
+
+.description-input {
+  resize: none;
+  font-size: 22px;
+  width: 410px;
+  height: 90px;
+}
+
+label {
+  font-family: 'Kulim Park', sans-serif;
+  font-size: 1rem;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-save, .button-cancel {
+  padding: 0.4em 1.7em;
+  margin: 0.1em;
+  border: 0.15em solid #cccccc;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  font-weight: 400;
+  color: white;
+}
+
+.button-save {
+  background-color: royalblue;
+}
+
+.button-cancel {
+  background-color: red;
 }

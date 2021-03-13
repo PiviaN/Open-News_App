@@ -6,7 +6,6 @@ import './Menu.css'
 const Menu = props => {
     return (
         <header>
-            <h1>Welcome to the Open News!</h1>
             <nav>
                 <ul className="menu">
                     <li>

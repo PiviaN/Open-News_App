@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-import './NewsData.css'
+import './NewsData.scss'
 
 import News from '../components/News'
 
@@ -21,19 +21,33 @@ class NewsData extends Component {
     renderCard() {
         return this.state.list.map(news => {
             return (
-                <div className="card-container">
-                    <div className="card">
-                        <div className="card-img"></div>
-                        <img src={news.file} alt="Image"/>
-                            <div className="card-img-hovered"></div>
-                        <div className="card-info">
-                            <div className="card-about">
-                                <a className="card-tag">{news.subject}</a>
-                                <div className="card-time">{new Date().toLocaleTimeString()}</div>
-                            </div>
-                            <h1 className="card-title">{news.description}</h1>
-                            <div className="card-creator">
-                                by <span>{news.author}</span>
+                <div className="container">
+                    <div className="post">
+                        <div className="header_post">
+                            <img src={news.file} alt="Image-posted-by-user" />
+                        </div>
+
+                        <div className="body_post">
+                            <div className="post_content">
+                                <h1>{news.title}</h1>
+                                <p>{news.description}</p>
+
+                                <div className="container_infos">
+                                    <div className="postedBy">
+                                        <span>author</span>
+                                        {news.author}
+                                    </div>
+
+                                    <div className="container_tags">
+                                        <span>Subject:</span>
+                                        <div className="tags">
+                                            <ul>
+                                                <li>{news.subject}</li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

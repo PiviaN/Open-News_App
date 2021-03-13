@@ -60,6 +60,7 @@ class CreateData extends Component {
             const news = { ...this.state.news }
             news[event.target.name] = result
             this.setState({ news })
+            console.log(result)
         }
 
         reader.readAsDataURL(file)
@@ -69,48 +70,44 @@ class CreateData extends Component {
     renderForm() {
         return (
             <form className="form" onSubmit={() => this.save()}>
-                <div className="topFields">
-                    <label htmlFor="photo">Photo:</label>
-                    <input type="file" onChange={e => this.updateFile(e)}
+                <label htmlFor="file" className="label">Upload Image:
+                <input type="file" onChange={e => this.updateFile(e)}
                         accept="image/gif, image/jpeg, image/png" name="file"
-                        id="input-file" />
-                    <img 
-                    src={this.state.news.file} alt="image-by-user"
-                    className="image-display" />
+                        className="file-input" />
+                </label>
 
-                    <label htmlFor="subject">Subject:</label>
-                    <input type="text" className="subject"
-                        name="subject" value={this.state.news.subject}
-                        onChange={e => this.updateField(e)}
-                        id="input-subject" maxLength="28" minLength="5" 
-                        required />
+                <label htmlFor="subject" className="label">Subject:
+                    <input type="text" name="subject" value={this.state.news.subject}
+                        onChange={e => this.updateField(e)} maxLength="28"
+                        minLength="5" required className="short-input" />
+                </label>
 
-                    <label htmlFor="title">Title:</label>
-                    <input type="text" className="title"
+                <label htmlFor="title" className="label">Title:
+                    <input type="text"
                         name="title" value={this.state.news.title}
                         onChange={e => this.updateField(e)}
-                        id="input-title" minLength="8" maxLength="50" 
-                        required />
-                </div>
+                        minLength="8" maxLength="50" required
+                        className="short-input" />
+                </label>
 
-                <div className="midField">
-                    <label htmlFor="description">Description:</label>
-                    <input type="text" className="description"
+
+                <label htmlFor="description" className="label">Description:
+                    <textarea type="text"
                         name="description" value={this.state.news.description}
-                        onChange={e => this.updateField(e)}
-                        id="input-description" minLength="16" maxLength="120" 
-                        required />
-                </div>
+                        onChange={e => this.updateField(e)} minLength="16"
+                        maxLength="120" required className="description-input">
+                    </textarea>
+                </label>
 
-                <div className="bottomField">
-                    <label htmlFor="author">Author:</label>
-                    <input type="text" className="author"
-                        name="author" value={this.state.news.author}
-                        onChange={e => this.updateField(e)}
-                        id="input-author" minLength="3" maxLength="26" required />
-                </div>
 
-                <div className="bottomRightIcons">
+                <label htmlFor="author" className="label">Author:
+                    <input type="text" name="author" value={this.state.news.author}
+                        onChange={e => this.updateField(e)} minLength="3"
+                        maxLength="26" required className="short-input" />
+                </label>
+
+
+                <div className="btns">
                     <button className="button-save"
                         onSubmit={() => this.save()}>Save</button>
                     <button className="button-cancel"
