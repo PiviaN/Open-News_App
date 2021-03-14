@@ -6,7 +6,7 @@ const Footer = props => {
     return (
         <React.Fragment>
             <footer className="footer">
-                Copyright All Rights Reserved
+                <p>© 2021 All rights reserved.</p>
             </footer>
         </React.Fragment>
     )

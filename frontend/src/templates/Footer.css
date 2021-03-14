@@ -1,11 +1,12 @@
 .footer {
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
-    top: 95%;
+    margin-top: 20px;
     width: 100%;
-    background-color: grey;
     text-align: center;
-    color: white;
-    font-size: 2rem;
+    color: black;
+    font-family: Verdana, sans-serif;
+    font-size: 1.4rem;
+    height: 50px;
 }

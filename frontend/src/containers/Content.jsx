@@ -9,7 +9,7 @@ import About from '../components/About'
 class Content extends Component {
     render() {
         return (
-            <main className="Content">
+            <main>
                 <Switch>
                     <Route path="/news">
                         <NewsData />

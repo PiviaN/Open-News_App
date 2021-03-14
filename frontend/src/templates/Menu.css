@@ -1,7 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
 header {
     font-family: 'Shippori Mincho B1', serif;
 }
@@ -37,11 +33,11 @@ header {
 }
 
 a.first {
-    background-color: royalblue;
+    background-color: rgb(89, 126, 238);
 }
 
 a.first:hover, a.first:focus, a.first:active {
-    background-color: #a21add;
+    background-color: royalblue;
 }
 
 a.second {
@@ -49,15 +45,15 @@ a.second {
 }
 
 a.second:hover, a.second:focus, a.second:active {
-    background-color:#778899;
+    background-color: #267548;
 }
 
 a.third {
-    background-color: #B22222;
+    background-color: #696767;
 }
 
 a.third:hover, a.third:focus, a.third:active {
-    background-color: gold;
+    background-color: #2e2e2e;
 }
 
 a.first:hover, a.first:focus, a.first:active,

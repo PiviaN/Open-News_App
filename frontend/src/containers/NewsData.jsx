@@ -19,12 +19,12 @@ class NewsData extends Component {
     }
 
     renderCard() {
-        return this.state.list.map(news => {
+        return this.state.list.map((news, index) => {
             return (
-                <div className="container">
+                <div className="container" key={index}>
                     <div className="post">
                         <div className="header_post">
-                            <img src={news.file} alt="Image-posted-by-user" />
+                            <img src={news.file} alt="posted-by-user" />
                         </div>
 
                         <div className="body_post">

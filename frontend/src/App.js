@@ -7,7 +7,7 @@ import Content from './containers/Content'
 import Menu from './templates/Menu'
 import Footer from './templates/Footer'
 
-export default props =>
+const app = _ =>
   <div className="App">
     <Router>
       <Menu />
@@ -15,3 +15,5 @@ export default props =>
       <Footer />
     </Router>
   </div>
+
+export default app

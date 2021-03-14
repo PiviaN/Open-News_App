@@ -78,15 +78,15 @@ class CreateData extends Component {
 
                 <label htmlFor="subject" className="label">Subject:
                     <input type="text" name="subject" value={this.state.news.subject}
-                        onChange={e => this.updateField(e)} maxLength="28"
-                        minLength="5" required className="short-input" />
+                        onChange={e => this.updateField(e)} maxLength="10"
+                        minLength="4" required className="short-input" />
                 </label>
 
                 <label htmlFor="title" className="label">Title:
                     <input type="text"
                         name="title" value={this.state.news.title}
                         onChange={e => this.updateField(e)}
-                        minLength="8" maxLength="50" required
+                        minLength="8" maxLength="28" required
                         className="short-input" />
                 </label>
 
@@ -95,7 +95,7 @@ class CreateData extends Component {
                     <textarea type="text"
                         name="description" value={this.state.news.description}
                         onChange={e => this.updateField(e)} minLength="16"
-                        maxLength="120" required className="description-input">
+                        maxLength="160" required className="description-input">
                     </textarea>
                 </label>
 
@@ -103,7 +103,7 @@ class CreateData extends Component {
                 <label htmlFor="author" className="label">Author:
                     <input type="text" name="author" value={this.state.news.author}
                         onChange={e => this.updateField(e)} minLength="3"
-                        maxLength="26" required className="short-input" />
+                        maxLength="14" required className="short-input" />
                 </label>
 
 
