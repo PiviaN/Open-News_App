@@ -16,11 +16,11 @@ const NewsData = () => {
     //     })
     // }
 
-    useEffect(() => {
-        fetch(baseUrl)
-            .then(resp => resp.json())
-            .then(data => setList({ list: data }))
-    })
+    // useEffect(() => {
+    //     fetch(baseUrl)
+    //         .then(resp => resp.json())
+    //         .then(data => setList({ list: data }))
+    // })
 
     const renderCard = () => {
         return list.map((news, index) => {
