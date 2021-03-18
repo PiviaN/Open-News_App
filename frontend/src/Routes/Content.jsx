@@ -5,7 +5,6 @@ import NewsData from '../components/NewsData'
 import CreateData from '../containers/CreateData'
 
 const Content = _ => (
-    <main>
         <Switch>   
             <Route path="/create">
                 <CreateData />
@@ -14,9 +13,6 @@ const Content = _ => (
                 <NewsData />
             </Route>
         </Switch>
-    </main>
-
-
 )
 
 export default Content

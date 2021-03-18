@@ -8,12 +8,12 @@ import Menu from './templates/Menu'
 import Footer from './templates/Footer'
 
 const app = _ =>
-  <div className="App">
+  <>
     <Router>
       <Menu />
       <Content />
       <Footer />
     </Router>
-  </div>
+  </>
 
 export default app
