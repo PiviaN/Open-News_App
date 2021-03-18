@@ -14,7 +14,7 @@ header {
 
 .menu li {
     float: left;
-    width: calc(100% / 3);
+    width: 50%;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -48,17 +48,9 @@ a.second:hover, a.second:focus, a.second:active {
     background-color: #267548;
 }
 
-a.third {
-    background-color: #696767;
-}
-
-a.third:hover, a.third:focus, a.third:active {
-    background-color: #2e2e2e;
-}
 
 a.first:hover, a.first:focus, a.first:active,
-a.second:hover, a.second:focus, a.second:active,
-a.third:hover, a.third:focus, a.third:active {
+a.second:hover, a.second:focus, a.second:active {
     transition: 0.8s;
 }
 

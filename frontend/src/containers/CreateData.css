@@ -1,41 +1,44 @@
 .form {
-  background-color: white;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 400px;
-  width: 420px;
+  width: 27%;
+}
+
+input, textarea {
+  outline: none;
+  border: none;
 }
 
 .label {
   font-family: 'Shippori Mincho', serif;
 }
 
-.file-input {
+.input-file {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
 .short-input, .description-input {
   font-family: 'Playfair Display', serif;
+  font-size: 1rem;
   width: 410px;
-  display: block;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 25px;
 }
 
 .short-input {
-  width: 410px;
   padding: 8px;
   height: 28px;
-  font-size: 16px;
 }
 
 .description-input {
   resize: none;
-  font-size: 22px;
-  width: 410px;
   height: 90px;
+  line-height: 1.4em;
+  padding: 5px 8px;
 }
 
 label {
@@ -61,6 +64,8 @@ label {
   cursor: pointer;
   font-weight: 400;
   color: white;
+  font-size: 1rem;
+  border-radius: 25px;
 }
 
 .button-save {

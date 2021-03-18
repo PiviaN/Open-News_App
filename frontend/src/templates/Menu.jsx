@@ -13,10 +13,7 @@ const Menu = props => {
                     </li>
                     <li>
                         <Link to="/create" className="second">Create</Link>
-                    </li>
-                    <li>
-                        <Link to="/about" className="third">About</Link>
-                    </li>
+                    </li>  
                 </ul>
             </nav>
         </header>
