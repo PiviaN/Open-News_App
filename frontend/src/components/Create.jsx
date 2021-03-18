@@ -10,9 +10,19 @@ const Create = props => {
             <div className="create">
                 {props.children}
             </div>
-        ) : <button onClick={() => loginWithRedirect()}>
-            Log In
+
+        ) : <div className="modal-container">
+            <div className="modal">
+                <h1>Login Required</h1>
+                <p>You need to be logged-in to submit a new post. 
+                    Click the button below and you will be redirected
+                    to it.
+                </p>
+                <button className="button-login" onClick={() => loginWithRedirect()}>
+                    Log In
     </button>
+            </div>
+        </div>
     )
 }
 
