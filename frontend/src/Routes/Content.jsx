@@ -2,7 +2,7 @@ import React from 'react'
 import { Switch, Route,  } from 'react-router-dom'
 
 import NewsData from '../components/NewsData'
-import CreateData from '../containers/CreateData'
+import CreateData from '../components/CreateData'
 
 const Content = _ => (
         <Switch>   
