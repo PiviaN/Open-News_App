@@ -1,0 +1,122 @@
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  width: 27%;
+}
+
+input, textarea {
+  outline: none;
+  border: none;
+}
+
+.label {
+  font-family: 'Shippori Mincho', serif;
+}
+
+.input-file {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.short-input, .description-input {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  width: 410px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 25px;
+}
+
+.short-input {
+  padding: 8px;
+  height: 28px;
+}
+
+.description-input {
+  resize: none;
+  height: 90px;
+  line-height: 1.4em;
+  padding: 5px 8px;
+}
+
+label {
+  font-family: 'Kulim Park', sans-serif;
+  font-size: 1rem;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-save, .button-cancel {
+  padding: 0.4em 1.7em;
+  margin: 0.1em;
+  border: 0.15em solid #cccccc;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  font-weight: 400;
+  color: white;
+  font-size: 1rem;
+  border-radius: 25px;
+}
+
+.button-save {
+  background-color: royalblue;
+}
+
+.button-cancel {
+  background-color: red;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px);
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background-color: white;
+  width: 600px;
+  padding: 30px 50px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  text-align: center;
+}
+
+.modal h1 {}
+
+.modal p {
+  opacity: 0.7;
+  font-size: 24px;
+  margin-top: 15px;
+}
+
+.button-login {
+  background-color: #47a386;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 18px;
+  margin-top: 20px;
+  padding: 10px 25px;
+  cursor: pointer;
+}
