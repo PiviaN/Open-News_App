@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import axios from 'axios'
+import React, { useState, useEffect } from 'react'
 
 import './NewsData.scss'
 
@@ -10,17 +9,11 @@ const NewsData = () => {
     const [list, setList] = useState([])
     const [order, setOrder] = useState('')
 
-    // componentDidMount() {
-    //     axios(baseUrl).then(resp => {
-    //         this.setState({ list: resp.data })
-    //     })
-    // }
-
-    // useEffect(() => {
-    //     fetch(baseUrl)
-    //         .then(resp => resp.json())
-    //         .then(data => setList({ list: data }))
-    // })
+    useEffect(() => {
+        fetch(baseUrl)
+            .then(resp => resp.json())
+            .then(data => setList(data))
+    })
 
     const renderCard = () => {
         return list.map((news, index) => {
@@ -66,7 +59,7 @@ const NewsData = () => {
         displayOrder = renderCard().sort().reverse()
 
     const changeSelect = (e) => {
-        setOrder({ order: e.target.value })
+        setOrder(e.target.value)
     }
 
     return (

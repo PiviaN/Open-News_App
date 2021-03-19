@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import './Menu.css'
 
-const Menu = props => {
+const Menu = _ => {
     return (
         <header>
             <nav>
