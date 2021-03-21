@@ -2,9 +2,13 @@ import React, { useState, useEffect } from 'react'
 
 import './NewsData.scss'
 
+import { useAuth0 } from '@auth0/auth0-react'
+
 const baseUrl = 'http://localhost:3001/news'
 
 const NewsData = () => {
+
+    const { loginWithRedirect } = useAuth0();
 
     const [list, setList] = useState([])
     const [order, setOrder] = useState('')

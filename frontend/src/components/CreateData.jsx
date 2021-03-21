@@ -20,6 +20,12 @@ const CreateData = () => {
 
     const { user, isAuthenticated, loginWithRedirect } = useAuth0();
 
+    // componentDidMount() {
+    //     axios(baseUrl).then(resp => {
+    //         this.setState({ list: resp.data })
+    //     })
+    // }
+
     useEffect(() => {
         fetch(baseUrl)
             .then(resp => resp.json())
@@ -27,7 +33,7 @@ const CreateData = () => {
     })
 
     const clear = () => {
-        setArticle({ article: article })
+        setArticle(article)
     }
 
     const getUpdatedList = (data, add = true) => {
@@ -36,17 +42,21 @@ const CreateData = () => {
         return list
     }
 
-    const save = () => {
-        setArticle({ author: user.name })
+    const save = (event) => {
+        event.preventDefault()
+        console.log(article)
 
-        const method = article.id ? 'put' : 'post'
-        const url = article.id ? `${baseUrl}/${article.id}` : baseUrl
-        axios[method](url, article)
-            .then(resp => {
-                const list = getUpdatedList(resp.data)
-                setArticle({ article, list })
-            })
-        alert('Your news was posted succesfully! :)')
+        // setArticle({ author: user.name })
+
+        // const method = article.id ? 'put' : 'post'
+        // const url = article.id ? `${baseUrl}/${article.id}` : baseUrl
+        // axios[method](url, article)
+        //     .then(resp => {
+        //         const list = getUpdatedList(resp.data)
+        //         // this.setState({ news: initialState.news, list })
+        //         setArticle({ article, list })
+        //     })
+        // alert('Your news was posted succesfully! :)')
     }
 
     const updateField = event => {
@@ -71,16 +81,16 @@ const CreateData = () => {
 
     const renderForm = () => {
         return (
-            <form className="form" onSubmit={save()}>
+            <form className="form" onSubmit={save}>
                 <label htmlFor="file" className="label">Upload Image:
-                <input type="file" onChange={updateFile()}
+                <input type="file" onChange={updateFile}
                         accept="image/gif, image/jpeg, image/png" name="file"
                         className="input-file" />
                 </label>
 
                 <label htmlFor="subject" className="label">Subject:
                     <input type="text" name="subject" value={article.subject}
-                        onChange={updateField()} maxLength="10"
+                        onChange={updateField} maxLength="10"
                         minLength="4" required className="short-input"
                         placeholder="Put the subject here" />
                 </label>
@@ -88,7 +98,7 @@ const CreateData = () => {
                 <label htmlFor="title" className="label">Title:
                     <input type="text"
                         name="title" value={article.title}
-                        onChange={updateField()}
+                        onChange={updateField}
                         minLength="8" maxLength="28" required
                         className="short-input"
                         placeholder="Put the title in here" />
@@ -98,7 +108,7 @@ const CreateData = () => {
                 <label htmlFor="description" className="label">Description:
                     <textarea type="text"
                         name="description" value={article.description}
-                        onChange={updateField()} minLength="16"
+                        onChange={updateField} minLength="16"
                         maxLength="160" required className="description-input"
                         placeholder="Put the description here" >
                     </textarea>
@@ -106,33 +116,36 @@ const CreateData = () => {
 
                 <div className="btns">
                     <button className="button-save"
-                        onSubmit={save()}>Save</button>
+                        onSubmit={save}>Save</button>
                     <button className="button-cancel"
-                        onClick={clear()}>Cancel</button>
+                        onClick={clear}>Cancel</button>
                 </div>
             </form>
         )
     }
 
-    return (isAuthenticated ? (
-        <>
-            {renderForm()}
-        </>
-    ) :
-        <div className="center">
-            <div className="modal-container">
-                <div className="modal">
-                    <h1>Login Required</h1>
-                    <p>You need to be logged-in to submit a new post.
-                    Click the button below and you will be redirected
-                    to it.
+    return (
+        (isAuthenticated ? (
+            <>
+                {renderForm()}
+            </>
+        )
+            :
+            <div className="center">
+                <div className="modal-container">
+                    <div className="modal">
+                        <h1>Login Required</h1>
+                        <p>You need to be logged-in to submit a new post.
+                        Click the button below and you will be redirected
+                        to it.
                     </p>
-                    <button className="button-login" onClick={() => loginWithRedirect()}>
-                        Log In
+                        <button className="button-login" onClick={() => loginWithRedirect()}>
+                            Log In
                     </button>
+                    </div>
                 </div>
             </div>
-        </div>
+        )
     )
 }
 
